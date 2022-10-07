@@ -35,13 +35,13 @@ class deck:
                 self.cardSingle = card()
                 self.cardSingle.number = j
                 if i == 1:
-                    self.cardSingle.suit == "hearts"
+                    self.cardSingle.suit = "hearts"
                 elif i == 2:
-                    self.cardSingle.suit == "diamonds"
+                    self.cardSingle.suit = "diamonds"
                 elif i == 3:
-                    self.cardSingle.suit == "spades"
+                    self.cardSingle.suit = "spades"
                 elif i == 4:
-                    self.cardSingle.suit == "clubs"
+                    self.cardSingle.suit = "clubs"
                 self.cards.append(self.cardSingle)
         random.shuffle(self.cards)
 
@@ -54,14 +54,9 @@ class deck:
 
     #gives us a card out of the deck
     def drawCard(self):
-        lookingForCard = True
-        while(lookingForCard):    
-            drawn = random.randint(1, 13)
-            if drawn in self.cards:
-                cardWeDrew = self.cards.pop(self.cards.index(drawn))
-                return cardWeDrew
-            elif len(self.cards) == 0:
-                self.shuffleDeck()
+        drawn = self.cards[-1]
+        self.cards = self.cards[:-1]
+        return drawn
 
 class card:
     def __init__(self):

@@ -15,10 +15,10 @@ def main():
     cardSelection = cardDeck.drawCard()
 
     while player1.is_playing == True: 
-        print(f"The current card is {cardSelection.number} of {nextCard.suit}")
+        nextCard = cardDeck.drawCard()
+        print(f"The current card is {cardSelection.number} of {cardSelection.suit}")
 
         #validate that input
-        nextCard = cardDeck.drawCard()
         validated = False
         while not validated:
             question = input("Do you think the next one is Higher or Lower? (h/l): ")
@@ -48,6 +48,7 @@ def main():
         cardSelection = nextCard
 
     print("Thanks for playing the game!")
+    print(f"You ended the game with {player1.score_start}")
 
 
 
