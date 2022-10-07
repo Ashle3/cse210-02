@@ -1,8 +1,13 @@
 # cse210-02
 Through groupwork, we create a game called Hilo.
 
+Group Members:
+Ashlee Butterfield,
+Brock Ford,
+Zachary Lindstrom,
+Sayri Quinchiguango de la Torre,
+Spencer Cory Christensen
 
-<<<<<<< HEAD
 Hilo is a game in which the player guesses if the next card drawn by the dealer will be higher or lower than the previous one. Points are won or lost based on whether or not the player guessed correctly.
 
 The player starts the game with 300 points.
@@ -25,7 +30,6 @@ The program must remain true to game play described in the overview.
 Enhanced input validation.
 Enhanced game play and game over messages.
 Enhanced game display, e.g. card suits
-=======
 TODO:
 Create a player class
     - player starts with 300 points
@@ -66,6 +70,8 @@ print current card (random int from 1-13)
  Validate input (easy)
  Give each player a name attribute
  
+<<<<<<< HEAD
+=======
 >>>>>>> toDoList
 
 
@@ -78,3 +84,4 @@ TODO List (October):
     ? put functions into classes istead of in main?
     Rename files and directories
     
+>>>>>>> f088d3f92b90eb16fe908367f434e46fe85d03e4
