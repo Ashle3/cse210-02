@@ -56,7 +56,7 @@ class Deck:
     #recreate card pile(deck)
     def checkForShuffle(self):
         if len(self.cards) < 12:
-            self.__init__()                                         #need to verify!! change j in line 42 to lower number to verify.
+            self.__init__()                                         
 
     #gives us new card from deck
     def drawCard(self):
