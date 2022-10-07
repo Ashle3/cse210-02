@@ -57,7 +57,7 @@ def cardCompareHigher(firstCard, secondCard):
                 return True
         elif secondCard.suit == "diamonds" and firstCard.suit != "hearts":
                 return True
-        elif secondCard.suit == "spades" and firstCard.suit == "clubes":
+        elif secondCard.suit == "spades" and firstCard.suit == "clubs":
                 return True
         else: 
                 return False
@@ -69,9 +69,9 @@ def cardCompareLower(firstCard, secondCard):
     elif firstCard.number == secondCard.number:
             if secondCard.suit == "clubs":
                 return True
-            elif secondCard.suit == "spade" and firstCard.suit != "club":
+            elif secondCard.suit == "spades" and firstCard.suit != "clubs":
                 return True
-            elif secondCard.suit == "diamond" and firstCard.suit == "heart":
+            elif secondCard.suit == "diamonds" and firstCard.suit == "hearts":
                 return True
             else: 
                 return False
