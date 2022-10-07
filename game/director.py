@@ -13,27 +13,17 @@ class Player:
         self.is_playing = True
         self.score_start = 300
 
+    def changePlayerScore(self, outcome):
+        if outcome:
+            self.score_start += 100
+        else:
+            self.score_start -= 75
 
-
-    #IDK IF WE USE THIS...
-    def start_game(self):
-        """Starts the game by running the main game loop.
-        
-        Args:
-            self (Director): an instance of Director.
-        """
-        while self.is_playing:
-            self.get_inputs()
-
-    #IDK IF WE USE THIS...
-    def get_inputs(self):
-        """Ask the user if they want to keep playing.
-
-        Args:
-            self (Director): An instance of Director.
-        """
-        keep_playing = input("Would you like to keep playing? [y/n] ")
-        self.is_playing = (keep_playing == "y")
+    def checkPlayerPoints(self):
+        if self.score_start <= 0:
+            self.is_playing = False
+        else:
+            return
 
 class deck:
 
@@ -78,6 +68,34 @@ class card:
         "construct a new deck of cards"
         self.number = 0
         self.suit = ""
+
+    def cardCompareHigher(self, secondCard):
+        if self.number < secondCard.number: return True
+        elif self.number == secondCard.number:
+            if secondCard.suit == "hearts":
+                return True
+            elif secondCard.suit == "diamonds" and self.suit != "hearts":
+                return True
+            elif secondCard.suit == "spades" and self.suit == "clubs":
+                return True
+            else: 
+                return False
+
+        else: return False
+
+    def cardCompareLower(self, secondCard):
+        if self.number > secondCard.number: return True
+        elif self.number == secondCard.number:
+            if secondCard.suit == "clubs":
+                return True
+            elif secondCard.suit == "spades" and self.suit != "clubs":
+                return True
+            elif secondCard.suit == "diamonds" and self.suit == "hearts":
+                return True
+            else: 
+                return False
+
+        else: return False
 
 
             
