@@ -19,7 +19,6 @@ def main():
 
         #validate that input
         nextCard = cardDeck.drawCard()
-        #print(f"The next card drawn is {nextCard}. ")
         validated = False
         while not validated:
             question = input("Do you think the next one is Higher or Lower? (h/l): ")
